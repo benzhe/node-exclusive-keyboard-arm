@@ -1,6 +1,6 @@
 {
-  "name": "exclusive-keyboard",
-  "version": "0.1.1",
+  "name": "exclusive-keyboard-arm",
+  "version": "0.2.0",
   "description": "Keylogger for NodeJS and Linux that grabs the input device exclusively",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/pfirpfel/node-exclusive-keyboard#readme",
   "dependencies": {
-    "arch": "^2.1.1",
     "bindings": "^1.5.0",
     "nan": "^2.14.0"
   }

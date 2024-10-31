@@ -1,14 +1,13 @@
 'use strict';
 
 const fs = require('fs');
-const arch = require('arch');
 const EventEmitter = require('events').EventEmitter;
 const eviocgrab = require('bindings')('eviocgrab.node').eviocgrab;
 
 const keycodes = require('./keyscodes');
 const EV_KEY = 1;
 const EVENT_TYPES = ['keyup', 'keypress', 'keydown'];
-const is64bit = arch() === 'x64';
+const is64bit = ['arm64', 'ppc64', 'x64', 's390x'].includes(require('os').arch());
 
 const parse = (input, buffer) => {
   const timestampLen = is64bit ? 16 : 8;
